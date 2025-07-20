@@ -289,14 +289,89 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 16px; /* Quita el padding general */
     text-align: center;
     transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden; /* Esto asegura que el border-radius se aplique a los hijos */
 }
 
-.about-card:hover {
-    transform: translateY(-5px);
+.about-card-floppy h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #f1f5f9;
 }
+
+.about-card-floppy p {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-family: 'DM Sans', 'sans-serif';
+    font-weight: 300;
+}
+
+.about-card-floppy {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0; /* Quita el padding general */
+    transition: transform 0.3s ease;
+    margin-bottom: 70px;
+    overflow: hidden; /* Esto asegura que el border-radius se aplique a los hijos */
+}
+
+
+.image-container-img {
+  height: 35rem;
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+  display: block;
+  background-color: #ffffff;
+}
+
+.image-container-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.about-card-floppy .content {
+    padding: 2rem; /* Aplica el padding solo al contenido */
+}
+
+
+/* Para hipervinculo con el proyecto de floppy */
+.links {
+    margin-top: 20px;
+    display: flex;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #f1f5f9;
+  border: 1px solid #2e2e2f;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 0.875rem;
+  transition: color 300ms ease-in-out;
+  max-width: 10rem;
+  gap: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 4px;
+  transition: border 150ms ease-in-out;
+}
+
+.project-link:hover {
+  border: 1px solid rgb(69, 69, 69);
+  color: #ffffff;
+}
+/* Final del hipervinculo de floppy */
 
 .about-icon {
     width: 60px;
@@ -322,6 +397,7 @@ body {
     line-height: 1.6;
     font-family: 'DM Sans', 'sans-serif';
     font-weight: 300;
+    padding: 15px;
 }
 
 /* Services Section */
@@ -408,6 +484,15 @@ body {
     margin: 0 auto 1rem;
     font-size: 1.5rem;
     font-weight: bold;
+    background-image: url('/static/img/Jose.png');
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
 }
 
 .team-member h3 {
@@ -672,6 +757,21 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
+    .image-container-img {
+        height: 16rem;
+        min-height: 180px;
+        max-height: 250px;
+    }
+
+    .image-container-img img {
+        width: 100%;
+        height: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+
     .footer .image svg {
         width: 360px;
         height: 170px;
@@ -688,6 +788,7 @@ body {
     .footer .image {
         margin-top: 2.5rem;
     }
+
 }
 /* Smooth scroll */
 html {
