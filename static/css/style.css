@@ -559,53 +559,138 @@ body {
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        content: "En TechNova, desarrollamos soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio hacia el futuro digital." / " texto";
+        font-size: 16px;
+        width: 260px;
+        line-height: 1.4;
+        text-align: center;
+        padding: 0 0.2rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.7rem;
     }
 
-    .contact-container {
-        grid-template-columns: 1fr;
+    .btn-primary {
+        font-size: 0.90rem;
+    }
+
+    .btn-secondary {
+        font-size: 0.90rem;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+        margin-top: 40px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7rem 1.2rem;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        margin: 0 auto;
+        border-radius: 12px;
+        z-index: 2000;
+        background: rgba(255,255,255,0.08);
+        border: 0.5px solid rgba(255,255,255,0.15);
+        box-sizing: border-box;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        z-index: 2101;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Cambia de absolute a relative */
+        left: 0;
+        top: 0;
+        transform: none;
+        z-index: 2102;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
     }
 
     .nav-menu {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        margin-top: 0.5rem;
         flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        width: 100vw;
+        background: rgba(10,10,10,0.98);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1.5rem 0 1rem 0;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        z-index: 2050;
     }
 
     .nav-menu.active {
         display: flex;
     }
 
-    .nav-actions {
-        flex-direction: column;
-        gap: 0.5rem;
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
     }
 
-    .mobile-menu-toggle {
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.7rem 0;
+        width: 100%;
         display: block;
     }
 
-    .navbar {
-        padding: 1rem;
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .footer .image svg {
+        width: 360px;
+        height: 170px;
+        max-width: 100%;
+        max-height: 900px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer .image {
+        margin-top: 2.5rem;
     }
 }
-
 /* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
+
