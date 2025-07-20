@@ -6,6 +6,9 @@
     <title>TechNova System</title>
     <link rel="icon" href="/static/img/tech.jpg" type="img/jpg">
     <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+    <!-- Cabinet Grotesk Tipography -->
+
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700&display=swap" rel="stylesheet">
     
     <!-- DM Sans Tipography -->
@@ -42,8 +45,8 @@
         </ul>
 
         <div class="nav-actions">
-            <a href="#contact" class="login-link">Iniciar Sesión</a>
-            <a href="#contact" class="btn btn-demo">Solicitar Demo</a>
+            <a href="/SignIn.html" class="login-link">Iniciar Sesión</a>
+            <a href="/Login.html" class="btn btn-demo">Crear cuenta</a>
         </div>
 
         <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
@@ -84,7 +87,7 @@
                 <svg   class="about-icon" xmlns="http://www.w3.org/2000/svg" fill="#ddd" viewBox="0 0 512 512"><path d="M256 0c17.7 0 32 14.3 32 32l0 10.4c93.7 13.9 167.7 88 181.6 181.6l10.4 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-10.4 0c-13.9 93.7-88 167.7-181.6 181.6l0 10.4c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-10.4C130.3 455.7 56.3 381.7 42.4 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l10.4 0C56.3 130.3 130.3 56.3 224 42.4L224 32c0-17.7 14.3-32 32-32zM107.4 288c12.5 58.3 58.4 104.1 116.6 116.6l0-20.6c0-17.7 14.3-32 32-32s32 14.3 32 32l0 20.6c58.3-12.5 104.1-58.4 116.6-116.6L384 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l20.6 0C392.1 165.7 346.3 119.9 288 107.4l0 20.6c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-20.6C165.7 119.9 119.9 165.7 107.4 224l20.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-20.6 0zM256 224a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
                 <h3>Visión</h3>
                 <p>
-                    Ser una empresa líder en América Latina en la creación e implementación de tecnologías disruptivas aplicadas a la automatización, la inteligencia artificial y la robótica, promoviendo un desarrollo tecnológico responsable, seguro y sostenible.
+                    Ser una empresa líder en América Latina en la implementación de tecnologías aplicadas a la automatización, la inteligencia artificial y la robótica, promoviendo un desarrollo tecnológico seguro y sostenible.
                 </p>
             </div>
             
@@ -192,31 +195,31 @@
         
         <div class="team-grid">
             <div class="team-member">
-                <div class="team-avatar"><img src="" alt=""></div>
-                <h3>Ana Martínez</h3>
-                <p class="role">CEO & Fundadora</p>
-                <p>Ingeniera en Sistemas con 15 años de experiencia en el desarrollo de soluciones tecnológicas innovadoras.</p>
+                <div class="team-avatar"><img src="/static/img/Laury.png" alt="Rostro Laury"></div>
+                <h3>Laury Emmanuel Jaquez</h3>
+                <p class="role">Director General / Fundador</p>
+                <p>Especialista en robótica y fundador de Dynamic StarS. Ex-mentor del NASA HERC 2025, liderando la visión tecnológica de TechNova.</p>
             </div>
             
             <div class="team-member">
-                <div class="team-avatar">CG</div>
-                <h3>Carlos González</h3>
-                <p class="role">CTO</p>
-                <p>Experto en arquitectura de software y tecnologías emergentes, con especialización en inteligencia artificial.</p>
+                <div class="team-avatar"><img src="/static/img/Enmanuel.png" alt="Rostro Enmanuel"></div>
+                <h3>Enmanuel Núñez Matias</h3>
+                <p class="role">Director de Tecnología</p>
+                <p>Ex-manager de Telemetría en Astrobosco y participante del NASA HERC 2025. Desarrollador en soluciones de IA y Programador de Páginas Web.</p>
             </div>
             
             <div class="team-member">
-                <div class="team-avatar">MR</div>
-                <h3>María Rodríguez</h3>
-                <p class="role">Directora de Desarrollo</p>
-                <p>Líder en desarrollo de software con enfoque en metodologías ágiles y experiencia de usuario.</p>
+                <div class="team-avatar"><img src="/static/img/Jose.png" alt="Rostro Jose"></div>
+                <h3>José Alfredo Caraballo</h3>
+                <p class="role">Director de Operaciones</p>
+                <p>Licenciado en matemática, cursando maestría en matemática pura. Experto en análisis de datos y gestión operativa.</p>
             </div>
             
             <div class="team-member">
-                <div class="team-avatar">JL</div>
-                <h3>Juan López</h3>
-                <p class="role">Especialista en IA</p>
-                <p>Científico de datos con doctorado en Machine Learning, especializado en soluciones de IA empresarial.</p>
+                <div class="team-avatar"><img src="/static/img/Sebastian.png" alt="Rostro Sebastian"></div>
+                <h3>Sebastian Monestina</h3>
+                <p class="role">Director de Integración de Sistemas</p>
+                <p>Manager general de Dynamic StarS, ex-manager STEM en Cygnus12 y participante del NASA HERC 2025. Líder en integración de sistemas y metodologías ágiles.</p>
             </div>
         </div>
     </section>
@@ -224,18 +227,23 @@
     <!-- Projects Section -->
     <section class="section" id="projects">
         <h2 class="section-title">Proyectos</h2>
-        <p class="section-subtitle">
+        <p class="section-subtitle" >
             En TechNova desarrollamos soluciones innovadoras que impactan positivamente a la sociedad y las empresas.
         </p>
         <div class="about-grid">
-            <div class="about-card">
-                <div class="about-icon" style="font-size:2rem; background: linear-gradient(135deg, #3b82f6 0%, #7dd3fc 100%); color: white; display: flex; align-items: center; justify-content: center;">
-                    <svg width="40" height="40" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.07 4.93A10 10 0 1 0 12 22a10 10 0 0 0 7.07-17.07zM12 20a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5.25 3.15 1-1.65-4.25-2.5z"/></svg>
+            <div class="about-card-floppy">
+                <div class="image-container-img">
+                    <img src="/static/Wireframe/Floppy.png" alt="Floppy Sistema de Monitoreo">
                 </div>
-                <h3>Floppy: Sistema de Monitoreo de Inundaciones</h3>
-                <p>
-                    Floppy es una plataforma inteligente diseñada para monitorear en tiempo real los niveles de agua en zonas vulnerables a inundaciones. Utiliza sensores IoT y análisis de datos para alertar a comunidades y autoridades, permitiendo una respuesta rápida y eficiente ante emergencias. Su objetivo es salvar vidas y reducir daños materiales a través de tecnología accesible y confiable.
-                </p>
+                <div class="content">
+                    <h3>Floppy: Sistema de Monitoreo de Inundaciones</h3>
+                    <p>
+                        Floppy es una plataforma inteligente diseñada para monitorear en tiempo real los niveles de agua en zonas vulnerables a inundaciones. Su objetivo es salvar vidas y reducir daños materiales a través de tecnología accesible y confiable.
+                    </p>
+                    <div class="links">
+                        <a href="https://floppy.onrender.com/" target="_blank" class="project-link">Ver Proyecto<svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 512 512"><path fill="#ddd" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
