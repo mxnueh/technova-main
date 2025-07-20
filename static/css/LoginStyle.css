@@ -300,12 +300,10 @@ body {
     .country-select {
         width: 100%;
         border-radius: 8px;
-        border-right: 2px solid #e1e1e1;
         margin-bottom: 16px;
     }
     
     .phone-input {
         border-radius: 8px;
-        border-left: 2px solid #e1e1e1;
     }
 }
