@@ -15,10 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/static/css/LoginStyle.css" type="text/css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="panelContainer">
         <div class="left-panel">
             <div class="logo-icon"></div>
         </div>
@@ -32,7 +32,7 @@
                 <h1 class="login-title">Crea tu cuenta</h1>
                 <p class="login-subtitle">¡Bienvenido! Completa los siguientes datos para comenzar.</p>
                 
-                <form id="signupForm">
+                <form id="loginForm">
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label">Nombre</label>
@@ -64,7 +64,7 @@
                         <label class="form-label">Contraseña</label>
                         <div class="password-container">
                             <input type="password" class="form-input" placeholder="Ingresa tu contraseña" id="password" required>
-                            <button type="button" class="password-toggle" onclick="togglePassword()">👁</button>
+                            <i class="fa-solid fa-eye-slash toggle-icon" id="togglePassword"></i>
                         </div>
                     </div>
                     
@@ -78,26 +78,66 @@
         </div>
     </div>
 
+    <div class="loading-overlay" id="loadingOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; color: white;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <div class="loading-text">Creando una Cuenta...</div>
+        </div>
+    </div>
+
     <script>
+        // Variables principales
+        const loginForm = document.getElementById('loginForm');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const panelContainer = document.getElementById('panelContainer');
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        // UN SOLO event listener para el formulario
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener valores de los campos
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const passwordValue = password.value.trim();
+
+            var randomNumber = Math.random() * (2500 - 6000) + 6000;
+            
+            // Validar campos
+            if (firstName && lastName && email && phone && passwordValue) {
+                // Mostrar pantalla de carga
+                panelContainer.style.display = 'none';
+                loadingOverlay.style.display = 'flex';
+                
+                // Simular procesamiento y redirigir
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, randomNumber);
+            } else {
+                alert('Por favor completa todos los campos requeridos');
+            }
+        });
+
+        // Toggle para mostrar/ocultar contraseña
+        togglePassword.addEventListener('click', () => {
+            const isHidden = password.type === 'password';
+            password.type = isHidden ? 'text' : 'password';
+            
+            // Cambiar íconos
+            togglePassword.classList.toggle('fa-eye');
+            togglePassword.classList.toggle('fa-eye-slash');
+        });
+
+        // Funciones de navegación
         function redirect() {
             window.location.href = "index.html";
         }
 
-        function togglePassword() {
-            const passwordInput = document.getElementById('password');
-            const toggle = document.querySelector('.password-toggle');
-            
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                toggle.textContent = '🙈';
-            } else {
-                passwordInput.type = 'password';
-                toggle.textContent = '👁';
-            }
-        }
-
         function showLogin() {
-            alert('Redirigiendo a la página de inicio de sesión...');
+            window.location.href = "SignIn.html";
         }
 
         // Interactividad para los inputs
@@ -114,24 +154,7 @@
             });
         });
 
-        // Envío del formulario
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const password = document.getElementById('password').value;
-            
-            if (firstName && lastName && email && phone && password) {
-                alert('La funcionalidad de creación de cuenta se implementará aquí');
-            } else {
-                alert('Por favor completa todos los campos requeridos');
-            }
-        });
-
-        // Sincronización del código de país y el placeholder del teléfono
+        // Sincronización del código de país y placeholder del teléfono
         document.getElementById('countryCode').addEventListener('change', function() {
             const phoneInput = document.getElementById('phone');
             const countryCode = this.value;
