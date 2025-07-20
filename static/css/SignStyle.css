@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Cabinet Grotesk', Roboto, sans-serif;
+    background: 
+            radial-gradient(ellipse at top left, #020024 0%, transparent 60%),
+            radial-gradient(ellipse at top right, #16169e 0%, transparent 60%),
+            radial-gradient(ellipse at bottom left, #3a67a3 0%, transparent 60%),
+            radial-gradient(ellipse at bottom right, #124a81 0%, transparent 60%),
+            radial-gradient(ellipse at center, #052d61 0%, transparent 80%),
+            linear-gradient(135deg, #020024 0%, #090979 50%, #187f93 100%);
+    min-height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #7dd3fc 0%, #3b82f6 50%, #6366f1 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 32px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Comienzo para logo-icon-second */
+
+.logo-icon-second {
+    width: 40px;
+    height: 40px;
+    display: inline-flex; /* Cambiado a inline-flex */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative; /* Añadido para los ::before y ::after */
+    vertical-align: middle; /* Alineación vertical */
+}
+.logo-icon-second::before {
+    content: '';
+    position: absolute;
+    top: 9px; /* Ajustado para el tamaño pequeño */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 4px;
+    background: white;
+    border-radius: 1px;
+}
+
+.logo-icon-second::after {
+    content: '';
+    position: absolute;
+    top: 15px; /* Ajustado para el tamaño pequeño */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 16px;
+    background: white;
+    border-radius: 1px;
+}
+/* Final para logo-icon-second */
+
+.right-panel {
+    flex: 1.5;
+    background: #161616;
+    color: #333;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1px solid #2e2e2f;
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #4285f4;
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 16px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'DM Sans','sans-serif';
+}
+
+.continue-btn:hover {
+    background: #444;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 24px;
+    color: #666;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: none;
+    }
+
+    .left-panel {
+        display: none;
+    }
+    
+    .right-panel {
+        min-height: 300px;
+    }
+    
+    .dashboard-mockup {
+        margin: 20px 0;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .sidebar-item {
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 12px 20px;
+    }
+    
+    .sidebar-item.active {
+        border-left: none;
+        border-bottom-color: #4285f4;
+    }
+    
+    .transactions-section {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .upload-area {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin: 20px 0;
+    }
+    
+    .bill-number {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        display: inline-block;
+        margin: 10px 0;
+    }
+}

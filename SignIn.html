@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finofo Login</title>
+
+    <!-- Cabinet Grotesk Tipography -->
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700&display=swap" rel="stylesheet">
+    
+    <!-- DM Sans Tipography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/css/SignStyle.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo-icon"></div>
+        </div>
+
+        <div class="right-panel">
+            
+            <div style="max-width: 400px; width: 100%; margin: auto;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 24px; cursor: pointer;" onclick="redirect()">
+                    <div class="logo-icon-second"></div>
+                    <span style="font-size: 24px; font-weight: bold; color: #ddd; vertical-align: middle;">Technova</span>
+                </div>
+                <h1 style="font-size: 28px; font-weight: 600; color: #ddd; margin-bottom: 8px;">Inicia sesión en Technova</h1>
+                <p style="color: #838383;font-weight: 400; margin-bottom: 40px;font-family: 'DM Sans', 'sans-serif';">¡Bienvenido! Inicia sesión para continuar</p>
+                <form>
+                    <div style="margin-bottom: 24px;">
+                        <label style="display: block; margin-bottom: 8px; color: #ddd; font-weight: 500;">Correo electrónico</label>
+                        <input type="email" class="form-input" placeholder="Ingresa tu correo electrónico">
+                    </div>
+                    <button type="submit" class="continue-btn">Continuar</button>
+                </form>
+                <div style="text-align: center;margin-top: 24px;color: #838383;font-family: 'DM Sans','sans-serif';">
+                    ¿No tienes una cuenta? <a class="register" href="/Login.html" style="color: #4285f4; text-decoration: none;">Regístrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirect() {
+            window.location.href = "index.html";
+        }
+
+        // Añade algo de interactividad
+        document.querySelector('.form-input').addEventListener('focus', function() {
+            this.style.borderColor = '#4285f4';
+        });
+
+        document.querySelector('.form-input').addEventListener('blur', function() {
+            if (!this.value) {
+                this.style.borderColor = '#e1e1e1';
+            }
+        });
+
+        document.querySelector('.continue-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = document.querySelector('.form-input').value;
+            if (email) {
+                alert('La funcionalidad de inicio de sesión se implementará aquí');
+            } else {
+                alert('Por favor, ingresa tu correo electrónico');
+            }
+        });
+    </script>
+</body>
+</html>
